@@ -30,7 +30,7 @@
 - Methods names should contain a verb.
 - Pick one word for function or concept inside the code base. *get, fetch* and *retrieve* all mean the same thing. Choose one and stick to them.
 
-### Chapter 3
+## Chapter 3
 
 - Functions should be small
     - If statements should have only one line in its body. All the logic above should be inside a function with a descriptive name.
@@ -41,3 +41,34 @@
     - For example, do not parse a XML in a function that is supposed to generate a set of date. Put the XML parsing inside another function.
     - The code should be read as a story, where each function it contains tells a story about that piece of code. All the particular logic of each part of the story contains its own story.
 - Switch cases should be replaced with Abstract Factories.
+- Function with one argument should be those who transforms the argument or answer some question about that argument. Any function different than that should have no arguments.
+- Flag arguments should not exist. They say loudly that the function is doing more than one thing. You should split the functions in one for each flag.
+- To reduce the number of arguments, we can write a new method for a argument that receives the other as an argument, we can make one argument the property of the class, we can turn the function into a class and pass one argument as the constructor.
+- When two or more arguments are needed for a function, the best thing to do is create a class that takes this two parameters as constructor arguments.
+    - Example: *generateData(number number, number digit)* turns into *generateData(Key key).*
+- Do not create functions that do something and answer something, like:
+    - *boolean createUser(username)*
+    - This function creates an user and tell if the creation worked.
+
+## Chapter 4
+
+- Comments are used to compensate bad code. They should never (or rarely) appear in good code.
+- It's better to spend energy in writing good code than to write and maintain comments.
+- Comments that make you go to another part of the code to understand it should be removed, because they do not accomplish their goal.
+
+## Chapter 6
+
+- Classes have to hide the implementation of the data it uses.
+    - That's why getters and setters are not a good idea.
+    - A function between variables is not a abstraction
+- It's not recommended that classes call other methods than:
+    - From classes that are instanciated in their methods
+    - From classes that are passed as an argument
+    - From classes thar are instanciated in the class
+- This is called Law of Demeter and basically says that a class should only interact with it's friends
+    - When we are walking our dog, we do not control it's legs. But instead we orientate the dog through the leach and it moves its legs in response.
+
+## Chapter 7
+
+- Exceptions should provide enough information for the developer to know WHERE and WHY the error ocurred
+-
