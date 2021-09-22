@@ -71,4 +71,7 @@
 ## Chapter 7
 
 - Exceptions should provide enough information for the developer to know WHERE and WHY the error ocurred
--
+- Don't return null from functions.
+    - It's better to throw an exception or return a special object
+    - Null returns need to be treated in the application. What if we miss one of the treatments?
+- Another thing is not pass null as an argument
