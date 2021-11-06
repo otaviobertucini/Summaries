@@ -49,6 +49,7 @@
 - Do not create functions that do something and answer something, like:
     - *boolean createUser(username)*
     - This function creates an user and tell if the creation worked.
+    
 
 ## Chapter 4
 
@@ -75,3 +76,26 @@
     - It's better to throw an exception or return a special object
     - Null returns need to be treated in the application. What if we miss one of the treatments?
 - Another thing is not pass null as an argument
+
+## Chapter 8
+
+- Don't use native types all over the code.
+    - Let's say we have an **array** of documents. Because it is an array we can do anything with it (delete, add, etc...)
+- We should encapsulate this array in a class Documents, that handles all the interactions with the documents
+- Making this, we prevent the programmer of doing something he does not want to
+- We also make the code cleaner, because now we can describe (via methods name) what we intend to do
+- One good way to learn new libraries APIs is doing learning testes
+    - It consists in write little chunks of code to learn the core features of the library and to know how it works
+
+## Chapter 9
+
+## Chapter 10
+
+- It's hard to have a good reason to have public variables
+- Classes should be small
+    - We measure a class size by the number of responsibilities it has
+    - If we can not find a proper name to a class, it is likely that the class is too big
+    - Another good hint: if we cannot describe a class without the use of "and", "if" or "or", it is probably big.
+- We want the code to look like a toolbox divided into many little labeled compartments, not a big box with everything tossed inside.
+- The methods in a class should use the maximum number of its variables.
+    - If some variables are only used by sew methods, this is a good indicator that there is a new class trying telling you to be created.
