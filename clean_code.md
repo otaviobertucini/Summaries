@@ -98,4 +98,18 @@
     - Another good hint: if we cannot describe a class without the use of "and", "if" or "or", it is probably big.
 - We want the code to look like a toolbox divided into many little labeled compartments, not a big box with everything tossed inside.
 - The methods in a class should use the maximum number of its variables.
-    - If some variables are only used by sew methods, this is a good indicator that there is a new class trying telling you to be created.
+    - If some variables are only used by few methods, this is a good indicator that there is a new class trying telling you to be created.
+- In a cohesive system, we implement features by extending the system, not by changing the existing behevior
+
+## Chapter 12
+
+- Writing good tests implicate in good designs
+    - This is true because writing good tests (tests that really verifies if the system works) need a decoupled and cohesive system. It is much easier to test small parts of code that do only one thing
+
+[https://stackoverflow.com/questions/2668355/how-much-abstraction-is-too-much](https://stackoverflow.com/questions/2668355/how-much-abstraction-is-too-much)
+
+## Chapter 16
+
+- Constants in Abstract class ⇒ wrong level of abstraction
+- Problem: DayDate uses a SpreadsheatDate (who is based on DayDate)
+- Under Construction!!!
