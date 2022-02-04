@@ -112,4 +112,57 @@
 
 - Constants in Abstract class ⇒ wrong level of abstraction
 - Problem: DayDate uses a SpreadsheatDate (who is based on DayDate)
-- Under Construction!!!
+- Move variables the closest you can from the using class
+    - Take them out of the base class and move them down
+- Use enum whenever possible
+    - Easy to change later
+    - Describes a behavior / naming of common things
+
+## Chapter 17 - Heuristics
+
+### Comments
+
+- Inappropriate information
+    - Information that was not supposed to be on the code
+    - Editing history, PRs tracking, authors
+- Obsolete comment
+    - A comment that is not in the right place anymore
+    - Or the code it was describing was moved or the code changed and the comment not updated
+    - Example: a comment telling what dates formats a function accepts
+- Redundant comment
+    - A comment that just states what the line of code said itself
+        
+        ```jsx
+        // Sums b with c and store in a
+        const a = b + c
+        ```
+        
+
+### Environment
+
+- Tests require more than one step
+    - Tests should be easy to execute
+    - One click button or one command line
+
+### Functions
+
+- Too many arguments
+    - No function should have more than three arguments
+    - No argument is best
+        - We can do this by using classes
+- Output arguments
+    - Functions should always return the result, not assign it to a param
+- Flag arguments
+    - They say that the function is doing more than one thing
+
+### General
+
+- Obvious behavior is unimplemented
+    - We cannot lose trust in the person who wrote the code
+    - A function should behave according to its name
+    - A function called *fetchUsers* should return a list of users, not a single user or null
+- Incorrect behavior at the boundaries
+    - Test the boundaries cases
+- Overriden safaties
+    - When we ignore some signals of danger
+    - Warnings of the compiler, tests that are not passing
