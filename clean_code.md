@@ -29,6 +29,9 @@
 - Class names should be a noun.
 - Methods names should contain a verb.
 - Pick one word for function or concept inside the code base. *get, fetch* and *retrieve* all mean the same thing. Choose one and stick to them.
+- The bigger the scope, the bigger the name of the variable
+    - For global variables, long names such as NORMAL_DOCUMENT_TYPE
+    - For small scope variables, small name. An index of a for loop should not have a long name like elementIndex.
 
 ## Chapter 3
 
@@ -161,6 +164,11 @@
     - We cannot lose trust in the person who wrote the code
     - A function should behave according to its name
     - A function called *fetchUsers* should return a list of users, not a single user or null
+    - Principle of least surprise
+        - If a system is designed to behave in some way, it must behave this way
+        - If a system has a high astonishment rate, it should be redesigned
+        - Minimize the learning curve
+        - 
 - Incorrect behavior at the boundaries
     - Test the boundaries cases
 - Overriden safaties
