@@ -102,7 +102,9 @@
 - We want the code to look like a toolbox divided into many little labeled compartments, not a big box with everything tossed inside.
 - The methods in a class should use the maximum number of its variables.
     - If some variables are only used by few methods, this is a good indicator that there is a new class trying telling you to be created.
-- In a cohesive system, we implement features by extending the system, not by changing the existing behevior
+- Maximum cohesion = all class variables are used by each method
+    - This is an ideal, but we should aim it
+- In a cohesive system, we implement features by extending the system, not by changing the existing behavior
 
 ## Chapter 12
 
@@ -174,3 +176,10 @@
 - Overriden safaties
     - When we ignore some signals of danger
     - Warnings of the compiler, tests that are not passing
+- Inappropriate static
+    - A good static method that which the chance of being polymorphic is small
+        - An example is *String.removeAccents(string)*
+    - Methods that can be polymorphic should not be static
+        - An example is *CTeDocument.getKey(document)*
+        - Numerous types of documents can have keys
+-
